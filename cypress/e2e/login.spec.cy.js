@@ -6,7 +6,7 @@ describe('ORANGE', () => {
     usernameFiel: "[name='username']",
     userpasswordFiel: "[name='password']",
     loginButton: "button",
-    sectionTitleTopBar: ".oxd-layout-context",
+    sectionTitleTopBar: ".oxd-topbar-header-breadcrumb > .oxd-text", 
     wrongCredentialAlert: ".oxd-alert"
   }
 
@@ -19,7 +19,6 @@ describe('ORANGE', () => {
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
     // contains = Confirma elemento na pagina logada!!!
     cy.get(selectorsList.sectionTitleTopBar).contains('Dashboard')
-
   })
 
   it('Login - Fail', () => {
@@ -28,9 +27,6 @@ describe('ORANGE', () => {
     cy.get(selectorsList.userpasswordFiel).type(userData.userFail.password)
     cy.get(selectorsList.loginButton).click()
     cy.get(selectorsList.wrongCredentialAlert) 
-
   })
 
-
 })
-
