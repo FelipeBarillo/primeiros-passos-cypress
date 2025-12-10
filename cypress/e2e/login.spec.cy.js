@@ -11,7 +11,7 @@ describe('ORANGE', () => {
   }
 
   it('Login - Sucesso', () => { //it.skip ele pula este teste
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/login')
     cy.get(selectorsList.usernameFiel).type(userData.userSucess.userName)
     cy.get(selectorsList.userpasswordFiel).type(userData.userSucess.password)
     cy.get(selectorsList.loginButton).click()
@@ -23,7 +23,7 @@ describe('ORANGE', () => {
   })
 
   it('Login - Fail', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/login')
     cy.get(selectorsList.usernameFiel).type(userData.userFail.userName)
     cy.get(selectorsList.userpasswordFiel).type(userData.userFail.password)
     cy.get(selectorsList.loginButton).click()
