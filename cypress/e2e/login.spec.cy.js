@@ -19,6 +19,7 @@ describe('ORANGE', () => {
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
     // contains = Confirma elemento na pagina logada!!!
     cy.get(selectorsList.sectionTitleTopBar).contains('Dashboard')
+
   })
 
   it('Login - Fail', () => {
