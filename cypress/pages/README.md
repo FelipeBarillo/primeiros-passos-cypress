@@ -26,4 +26,4 @@ A pasta `pages` implementa o **Page Object Model (POM)**. Cada arquivo é uma cl
 | Maintenance | `MaintenancePage.js` | Manutenção e Limpeza de Dados (Purge) | Campo de autenticação (senha de Admin), Formulário de "Purge Records". |
 | Clain | `ClaimPage.js` | Gestão e Atribuição de Reembolsos de Despesas | Campo de busca, Botão "Assign Claim", Tabela de pedidos. |
 | Buzz | `BuzzPage.js` | Rede Social Interna (Feed de Notícias) | Campo de texto "Create Post", Botão "Post", Botões "Like" / "Comment". |
-| ... | ... | ... | ... |
+
