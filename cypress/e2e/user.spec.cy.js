@@ -17,6 +17,8 @@ describe('ORANGE', () => {
     lastName: "[name='lastName']",
     genericFiled: ".oxd-input", //4° - 5° - 6°
     dateField: "[placeholder='yyyy-dd-mm']",
+    nationality: ".oxd-select-text--after",
+    maritinalStatus: ".oxd-select-text--after",
     closeButton: ".--close",
     genderButtom: ".oxd-radio-wrapper",
     saveButton: "[type='submit']",
@@ -33,7 +35,6 @@ describe('ORANGE', () => {
     // contains = Confirma elemento na pagina logada!!!
     cy.get(selectorsList.sectionTitleTopBar).contains('Dashboard')
     cy.get(selectorsList.myInfoButton).click()
-
     cy.get(myInfoSelector.firstName).clear().type('Felipe') // type = Elemento preenchido no imput
     cy.get(myInfoSelector.middleName).clear().type('Santana')
     cy.get(myInfoSelector.lastName).clear().type('Barillo')
@@ -42,10 +43,14 @@ describe('ORANGE', () => {
     cy.get(myInfoSelector.genericFiled).eq(6).clear().type('Felipe06')
     cy.get(myInfoSelector.dateField).eq(0).clear().type('1986-06-24')
     cy.get(myInfoSelector.closeButton).click()
+    cy.get(myInfoSelector.nationality).eq(0).click()
+    cy.get(':nth-child(27) > span').click()
+    cy.get(myInfoSelector.maritinalStatus).eq(1).click()
+    cy.get(':nth-child(4) > span').click()
     cy.get(myInfoSelector.dateField).eq(1).clear().type('1986-06-24')
     cy.get(myInfoSelector.genderButtom).eq(0).click()
     cy.get(myInfoSelector.saveButton).eq(0).click()
-    cy.get('body').should('contain', 'Successfully Update')
+    cy.get('body').should('contain', 'Successfully Update') // should = A asserção: verifica se a caixa de seleção AGORA contém o texto 'Successfully Update'.
   })
 
   it('Login - Fail', () => {
