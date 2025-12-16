@@ -27,3 +27,13 @@ A pasta `pages` implementa o **Page Object Model (POM)**. Cada arquivo é uma cl
 | Clain | `ClaimPage.js` | Gestão e Atribuição de Reembolsos de Despesas | Campo de busca, Botão "Assign Claim", Tabela de pedidos. |
 | Buzz | `BuzzPage.js` | Rede Social Interna (Feed de Notícias) | Campo de texto "Create Post", Botão "Post", Botões "Like" / "Comment". |
 
+<br>
+
+Uma dica para melhorar sua organização é você criar um arquivo para organizar o menu principal da página.
+
+| Módulo do OrangeHRM | Arquivo | Funcionalidade Principal | Principais Elementos para Mapear |
+| :--- | :--- | :--- | :--- |
+| Menu Principal | `menuPage.js` | Gerenciamento do Menu | Localização da pagina |
+
+
+
