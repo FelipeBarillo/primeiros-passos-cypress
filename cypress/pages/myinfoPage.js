@@ -7,14 +7,13 @@ class MyinfoPage {
     
     genericFiled: ".oxd-input", // 4° - 5° - 6° - 7° - 8º
     comboBox: ".bi-calendar", // 0° - 1 (License Expiry e Date of Brith)
-    closeButton: ".--close",
+    closeButtonLicense: ".--close",
 
     nationality: ".oxd-select-text--after",
     nationalityImput: ":nth-child(27) > span",
     maritinalStatus: ".oxd-select-text--after",
     maritinalImput: ":nth-child(4) > span",
-       
-    
+    closeButtonDateBrith: ".oxd-date-input-link", // 3°
     genderButtom: ".oxd-radio-wrapper",
     saveButton: "[type='submit']",
         }
@@ -37,7 +36,7 @@ class MyinfoPage {
         cy.get(this.selectorList().genericFiled).eq(6).clear().type(licenseNumber)
         cy.get(this.selectorList().comboBox).eq(0).click()
         cy.get(this.selectorList().genericFiled).eq(7).clear().type(licenseExpiry)
-        cy.get(this.selectorList().closeButton).click()
+        cy.get(this.selectorList().closeButtonLicense).click()
     }
 
     fillStatus(dataBrith) {
@@ -48,6 +47,8 @@ class MyinfoPage {
         cy.get(this.selectorList().genderButtom).eq(0).click({force: true})
         cy.get(this.selectorList().comboBox).eq(1).click()
         cy.get(this.selectorList().genericFiled).eq(8).clear().type(dataBrith)
+        cy.get(this.selectorList().closeButtonDateBrith).eq(2).click()
+        cy.get(this.selectorList().genderButtom).eq(0).click()
 
     }
 
