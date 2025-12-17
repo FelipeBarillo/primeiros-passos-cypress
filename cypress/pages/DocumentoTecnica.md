@@ -31,11 +31,13 @@ Nesta seção, detalho os comandos do Cypress e os tipos de funções JavaScript
 | **Encapsulamento** | Prática de esconder os seletores dentro de uma função para proteger o código. | `const selector = { ... }` |
 | **Modularização** | Divisão do código em múltiplos arquivos usando import e export. | `export default DashboardPage` |
 
-📈 Fluxo da Arquitetura
+### 📈 Fluxo da Arquitetura
 Para garantir a qualidade, o projeto segue o seguinte fluxo de execução:
 
-Setup: Instanciação das classes no arquivo de teste.
+**Setup**: Instanciação das classes no arquivo de teste.
 
-Ação: Métodos das Page Objects interagem com o DOM usando comandos cy.
+**Ação**: Métodos das Page Objects interagem com o DOM usando comandos cy.
+
+**Validação**: Uso de should e contains para garantir que o sistema retornou o resultado esperado.
 
 Validação: Uso de should e contains para garantir que o sistema retornou o resultado esperado.
