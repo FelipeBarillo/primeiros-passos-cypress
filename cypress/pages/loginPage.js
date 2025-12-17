@@ -23,6 +23,11 @@ class LoginPage {
         cy.get(this.selectorList().passwordFiel).type(password) // Seleciona o campo de senha e digita o valor passado por parâmetro
         cy.get(this.selectorList().loginButton).click() // Clica no botão para enviar os dados e tentar o acesso
     }
+
+    checkAcessInvalid() {
+        cy.get(this.selectorList().wrongCredentialAlert) // Verifica se o alerta de "credenciais incorretas" está visível na tela
+    }
+    
 }
 
 export default LoginPage // Exporta a classe para permitir a automação do fluxo de autenticação

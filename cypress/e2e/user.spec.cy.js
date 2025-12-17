@@ -13,10 +13,10 @@ const myinfoPage = new MyinfoPage() // Instancia a classe MyinfoPage para uso no
 describe('ORANGE', () => { 
 
   
-  it.only('User Info update - Sucesso', () => { //it.skip ele pula este teste / it.only ele roda apenas esse it
+  it('User Info update - Sucesso', () => { //it.skip ele pula este teste / it.only ele roda apenas esse it
     
     loginPage.accessLoginPage() // Acessa a URL da página de login do sistema
-    loginPage.loginWithAnyUser('Admin', 'admin123') // Realiza o login com as credenciais fornecidas
+    loginPage.loginWithAnyUser(userData.userSucess.userName, userData.userSucess.password) // Realiza o login com as credenciais fornecidas
     
     dashboardPage.checkDashboardPage() // Valida se o redirecionamento para a Dashboard ocorreu com sucesso
 
@@ -28,13 +28,5 @@ describe('ORANGE', () => {
     myinfoPage.fillButtonSave() // Clica no botão de salvar para confirmar as alterações
     
   })
-
-  it('Login - Fail', () => {
-    cy.visit('/login') // Navega diretamente para a rota de login
-    cy.get(selectorsList.usernameFiel).type(userData.userFail.userName) // Seleciona o campo de usuário e digita um dado inválido do fixture
-    cy.get(selectorsList.userpasswordFiel).type(userData.userFail.password) // Seleciona o campo de senha e digita a senha inválida do fixture
-    cy.get(selectorsList.loginButton).click() // Clica no botão de login para submeter o formulário
-    cy.get(selectorsList.wrongCredentialAlert) // Verifica se o alerta de "credenciais incorretas" está visível na tela
-  })
-
+  
 })
