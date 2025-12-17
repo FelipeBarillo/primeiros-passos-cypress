@@ -39,5 +39,3 @@ Para garantir a qualidade, o projeto segue o seguinte fluxo de execução:
 **Ação**: Métodos das Page Objects interagem com o DOM usando comandos cy.
 
 **Validação**: Uso de should e contains para garantir que o sistema retornou o resultado esperado.
-
-Validação: Uso de should e contains para garantir que o sistema retornou o resultado esperado.
