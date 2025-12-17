@@ -13,7 +13,6 @@ describe('ORANGE', () => {
     
     loginPage.accessLoginPage() // Acessa a URL da página de login do sistema
     loginPage.loginWithAnyUser(userData.userSucess.userName, userData.userSucess.password) // Realiza o login com as credenciais fornecidas
-    
     dashboardPage.checkDashboardPage() // Valida se o redirecionamento para a Dashboard ocorreu com sucesso
     
   })

@@ -31,6 +31,23 @@ Nesta seção, detalho os comandos do Cypress e os tipos de funções JavaScript
 | **Encapsulamento** | Prática de esconder os seletores dentro de uma função para proteger o código. | `const selector = { ... }` |
 | **Modularização** | Divisão do código em múltiplos arquivos usando import e export. | `export default DashboardPage` |
 
+### 🎲 Entendendo o Chance.js no QA
+O Chance.js é um gerador de dados aleatórios. No contexto de testes automatizados, ele serve para criar massa de dados dinâmica, garantindo que seu sistema se comporte bem com diferentes tipos de entradas.
+
+| Metodo | Descrição | Exemplo Prático |
+| :--- | :--- | :--- |
+| **Chance.js** | Biblioteca utilizada para gerar massa de dados aleatórios de forma dinâmica. | (Base da biblioteca) |
+| **chance.first()** | Gera um primeiro nome aleatório. | `João` |
+| **chance.last()** | Gera um sobrenome aleatório. | `Silva` |
+| **chance.string()** | Gera uma string (sequência de caracteres) aleatória. | `f82$nkLp` |
+| **chance.email()** | Gera um endereço de e-mail válido em formato. | `qa_tester@example.com` |
+| **chance.integer()** | Gera um número inteiro aleatório. | `42` |
+| **chance.cpf()** | Gera um CPF válido (comum com plugins para o Brasil). | `123.456.789-00` |
+
+Vou deixar a documentação para fins de pesquisas e estudo [ChanceJS](https://chancejs.com/usage/node.html).<br>
+Estou usando na versão NODE
+
+
 ### 📈 Fluxo da Arquitetura
 Para garantir a qualidade, o projeto segue o seguinte fluxo de execução:
 
