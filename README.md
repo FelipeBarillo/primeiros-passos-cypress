@@ -1,76 +1,66 @@
-# primeiros-passos-cypress
+# Primeiros Passos Cypress
 
-### Adicioando primeito teste de login
+Este projeto, intitulado **primeiros-passos-cypress**, é um repositório dedicado ao estudo e à aplicação prática de conceitos fundamentais de automação de testes de ponta a ponta (E2E) utilizando o **framework Cypress**. Desenvolvido como parte da minha jornada para me tornar um **QA Engineer**, o projeto foca na criação de suítes de testes robustas para fluxos de login e gestão de usuários. A arquitetura foi estruturada sob o padrão **Page Object Model (POM)** para garantir a organização e o reuso de código, além de utilizar Fixtures para o gerenciamento eficiente de massa de dados.
 
-## 📝 Opção 1: Inicializando um novo Repositório Local
-Use esta sequência se você estiver começando um projeto do zero no seu computador e quiser enviá-lo para o GitHub.
+### 🚀 Funcionalidades Automatizadas
 
-Bash
+Atualmente, o projeto cobre os seguintes fluxos:
 
-### 1. Cria um arquivo README.md com o título'
-> echo "# primeiros-passos-cypress" >> README.md
+- Login: Validação de acesso ao sistema (login.spec.cy.js).
 
-### 2. Inicializa o Git no diretório atual
-> git init
+- Gestão de Usuário: Testes relacionados ao perfil e informações do usuário (user.spec.cy.js).
 
-### 3. Adiciona o arquivo README.md para ser rastreado
-> git add README.md
+### 🏗️ Arquitetura e Boas Práticas
 
-### 4. Confirma a primeira alteração com uma mensagem
-> git commit -m "first commit"
+Para tornar os testes mais sustentáveis e organizados, apliquei os seguintes conceitos:
 
-### 5. Renomeia a branch principal para 'main'
-> git branch -M main
+- Page Object Model (POM): Separação da lógica de interação com a página da lógica dos testes, facilitando a manutenção.
 
-### 6. Conecta o repositório local ao repositório remoto no GitHub
-> git remote add origin https://github.com/FelipeBarillo/primeiros-passos-cypress.git (Use o seu HTTP)
+- Data-Driven Testing: Uso de arquivos JSON na pasta fixtures para gerenciar massas de dados.
 
-### 7. Envia o código da branch 'main' para o remoto 'origin'
-> git push -u origin main
+- Custom Commands: Comandos personalizados para otimizar ações repetitivas (como o login).
 
-## 🚀 Opção 2: Enviando um Repositório Local Existente
-Use esta sequência se você já tem um projeto Git inicializado (você já rodou git init e já tem commits) e só precisa conectá-lo ao GitHub.
+### 📂 Estrutura do Projeto
 
-Bash
+| Pasta | Descrição |
+| :--- | :--- |
+| **e2e** | Arquivos de teste (.cy.js) |
+| **fixtures** | Massa de dados (JSON) |
+| **pages** | Camada de Page Objects (POM) |
+| **support** | Comandos personalizados e configurações |
+| **.gitignore** | Arquivos ignorados pelo Git |
+| **cypress.config.js** | Configurações globais do Cypress |
+| **package.json** | Dependências e scripts do projeto |
+| **README.md** | Documentação do projeto |
 
-### 1. Conecta o repositório local ao repositório remoto no GitHub
-> git remote add origin https://github.com/FelipeBarillo/primeiros-passos-cypress.git
+### 🛠️ Tecnologias Utilizadas
 
-### 2. Renomeia a branch principal para 'main' (se necessário)
-> git branch -M main
+- Cypress
+- JavaScript
+- Node.js
 
-### 3. Envia o código da branch 'main' para o remoto 'origin'
-git push -u origin main
+###  🏁 Como Rodar o Projeto
 
-## 🔑 Autenticação
-Ao rodar o git push, você provavelmente será solicitado a autenticar. O GitHub exige que você use um Token de Acesso Pessoal (Personal Access Token - PAT) no lugar da sua senha da conta para operações via linha de comando (a menos que você esteja usando um gerenciador de credenciais ou SSH).
+1. Clone o repositório:
+```bash
+clone htps://github.com/seu-usuario/primeiros-passos-cypress.git
+```
+2. Instale as dependências:
+```bash
+npm install
+```
+3. Execute os testes:
 
-Se o push falhar devido a problemas de autenticação, você precisará gerar um PAT no GitHub e usá-lo quando a janela de login aparecer ou quando for solicitada a senha no terminal.
+Via interface (Headed):
+```bash
+npx cypress open
+```
 
-Ex:<br>
-felipe@mintQA:~/Área de trabalho/primeiros-passos-cypress$ git push origin main<br>
-Username for 'https://github.com': (Seu nome do perfil)<br>
-Password for 'https://FelipeBarillo@github.com': (Aqui será o token gerado)<br>
+Via terminal (Headless): 
+```bash
+npx cypress run
+```
 
-<br>
+---
 
-## 🛠️ O Que Fazer se Você Não Tem um Token PAT
-Se você ainda não tem um Token de Acesso Pessoal, precisará gerar um no site do GitHub:<br>
-<ol>
-  <li>Acesse as Configurações do GitHub: Vá para Settings Configurações no seu perfil.</li>
-  <li>Vá para as Configurações do Desenvolvedor: Role para baixo até a barra lateral e clique em Developer settings.</li>
-  <li>Gere um Novo Token: Clique em Personal access tokens $\rightarrow$ Tokens (classic) $\rightarrow$ Generate new token (classic).</li>
-  <li>Configure o Token:</li>
-<ul>
-  <li>Note: Dê um nome descritivo (ex: "Terminal Access").</li>
-  <li>Expiration: Escolha uma data de expiração segura (ex: 30 dias ou 90 dias).</li>
-  <li>Scopes (Permissões): Você deve selecionar as permissões necessárias. Para push em repositórios, a permissão repo (controle total sobre repositórios privados) geralmente é suficiente e necessária.</li>
-</ul>
-  <li>Copie o Token: Após a geração, o GitHub exibirá o token. Copie-o Imediatamente! Ele não será mostrado novamente.</li>
-</ol>
-  <br>
-  Use o Nome de Usuário e este Token copiado na solicitação do terminal para concluir o git push origin main.
-  
-
-
-
+### 💡 Este projeto é um marco na minha jornada para me tornar um QA Engineer de excelência.
