@@ -45,11 +45,15 @@ Para tornar os testes mais sustentáveis e organizados, apliquei os seguintes co
 ```bash
 clone htps://github.com/seu-usuario/primeiros-passos-cypress.git
 ```
-2. Instale as dependências:
+2. Abra o terminal na pasta do projeto:
+```bash
+cd
+```
+3. Instale as dependências:
 ```bash
 npm install
 ```
-3. Execute os testes:
+4. Execute os testes:
 
 Via interface (Headed):
 ```bash
